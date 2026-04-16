@@ -1,17 +1,17 @@
-# Example Lecture
+# Aula de Exemplo
 
-Welcome to this example lecture!
+Bem-vindo a esta aula de exemplo!
 
-This is a sample lesson to demonstrate how course content can be structured. You can use this template to add your own text, code examples, images, or exercises.
+Esta é uma lição de amostra para demonstrar como o conteúdo do curso pode ser estruturado. Você pode usar este modelo para adicionar seu próprio texto, exemplos de código, imagens ou exercícios.
 
-## Section Title
+## Título da Seção
 
-Add your content here. For example, you can explain a concept, provide instructions, or include a code block:
+Adicione seu conteúdo aqui. Por exemplo, você pode explicar um conceito, fornecer instruções ou incluir um bloco de código:
 
 ```python
-print("Hello, world!")
+print("Olá, mundo!")
 ```
 
-## Exercise
+## Exercício
 
-Try editing this lecture or adding new sections to practice creating course materials.
+Tente editar esta aula ou adicionar novas seções para praticar a criação de materiais do curso.
