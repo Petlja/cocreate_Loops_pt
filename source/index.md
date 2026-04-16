@@ -1,26 +1,26 @@
 ﻿---
 status: exclude
-alias: Loops_and_Cryptography
+alias: Loops_and_Cryptography_pt
 lang: en
 short_description: Introduction to Cryptography with Loops
 long_description: >
-    <p>In this course, you will learn to apply loops on characters and strings to implement basic cryptographic algorithms.</p>
+    <p>Neste curso, você aprenderá a aplicar laços em caracteres e strings para implementar algoritmos criptográficos básicos.</p>
     <p>
     <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">
     <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
-    <br>This course was published by Petlja Foundation under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">Creative Commons Attribution 4.0 International License (CC BY 4.0)</a>.
+    <br>Este curso foi publicado pela Fundação Petlja sob a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">Licença Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)</a>.
     </p>
 
 will_learn:
-    - Conditions and Loops Fundamentals
-    - Characters and Strings Fundamentals
-    - Introduction to Cryptography
-    - Caesar Cipher
+    - Fundamentos de Condições e Laços
+    - Fundamentos de Caracteres e Strings
+    - Introdução à Criptografia
+    - Cifra de César
     - Skytale
     - XOR
 
 needed: 
-    - A basic personal computer system with Internet access. Optionally, a computer system with specific programming language IDE.
+    - Um computador pessoal básico com acesso à Internet. Opcionalmente, um computador com IDE de linguagem de programação específica.
 
 useful:
     - Microsoft C++, C, and Assembler documentation: https://learn.microsoft.com/en-us/cpp/
@@ -29,19 +29,20 @@ useful:
     - Python language documentation: https://docs.python.org/3/
 ---
 
-# Loops and Cryptography
 
-You are about to start an introductory lesson about loops on characters and strings
-to implement basic cryptographic algorithms.
+# Laços e Criptografia
 
-Course author: Petlja Foundation
+Você está prestes a iniciar uma lição introdutória sobre laços em caracteres e strings
+para implementar algoritmos criptográficos básicos.
 
-This course is published by Petlja Foundation under the
-[Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.sr_LATN).
+Autor do curso: Fundação Petlja
+
+Este curso é publicado pela Fundação Petlja sob a
+[Licença Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.sr_LATN).
 
 ```{toctree}
 :maxdepth: 2
-:caption: Contents
+:caption: Conteúdo
 :hidden:
 
 intro/index
