@@ -2,7 +2,7 @@
 status: exclude
 alias: Loops_and_Cryptography_pt
 lang: en
-short_description: Introduction to Cryptography with Loops
+short_description: Introdução à Criptografia com Laços
 long_description: >
     <p>Neste curso, você aprenderá a aplicar laços em caracteres e strings para implementar algoritmos criptográficos básicos.</p>
     <p>
