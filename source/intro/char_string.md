@@ -1,19 +1,19 @@
-# Characters and strings
 
-Understanding how characters and strings are represented will help you to
-handle text correctly in the following lesson, ensuring proper data processing.
+# Caracteres e strings
 
-The character data type, commonly referred to as char, is used to represent
-individual characters. Since computers can only store binary values, characters
-must be encoded as numbers. In modern computer systems, either ASCII or Unicode
-encoding schemes are used. Older programming languages (e.g., C) typically rely
-on ASCII, while modern languages (e.g., C#) support Unicode.
+Compreender como os caracteres e as strings são representados ajudará você a
+lidar corretamente com textos na próxima lição, garantindo o processamento adequado dos dados.
+
+O tipo de dado caractere, comumente chamado de char, é usado para representar
+caracteres individuais. Como os computadores só podem armazenar valores binários, os caracteres
+precisam ser codificados como números. Nos sistemas computacionais modernos, são usados esquemas de codificação ASCII ou Unicode.
+Linguagens de programação mais antigas (por exemplo, C) normalmente usam ASCII, enquanto linguagens modernas (por exemplo, C#) suportam Unicode.
 
 ## ASCII
 
-ASCII *(American Standard Code for Information Interchange)* is a 7-bit binary
-code, represented in memory with 8 bits (one byte). It defines 128 characters,
-including letters, digits, punctuation marks, and control characters:
+ASCII *(American Standard Code for Information Interchange)* é um código binário de 7 bits,
+representado na memória com 8 bits (um byte). Ele define 128 caracteres,
+incluindo letras, dígitos, sinais de pontuação e caracteres de controle:
 
 ```text
 DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH
@@ -54,11 +54,10 @@ DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH
 
 ## Unicode
 
-Unicode is an extended character set that includes all ASCII codes as its first
-part. In Unicode, the first 128 code values (U+0000 to U+007F) are completely
-identical to ASCII codes. Beyond that, Unicode defines more than 150,000
-characters from writing systems around the world. For example, the specific
-Latin characters of the Serbian alphabet are defined like this...
+Unicode é um conjunto de caracteres estendido que inclui todos os códigos ASCII como sua primeira parte.
+No Unicode, os primeiros 128 valores de código (U+0000 a U+007F) são completamente
+idênticos aos códigos ASCII. Além disso, o Unicode define mais de 150.000
+caracteres de sistemas de escrita do mundo todo. Por exemplo, os caracteres latinos específicos do alfabeto sérvio são definidos assim...
 
 | Code   | Symbol | DEC     |
 |--------|--------|---------|
@@ -73,7 +72,7 @@ Latin characters of the Serbian alphabet are defined like this...
 | U+017D | Ž      | 381     |
 | U+017E | ž      | 382     |
 
-...Latin letters written with two characters are defined like this...
+...Letras latinas escritas com dois caracteres são definidas assim...
 
 | Code   | Symbol | DEC     |
 |--------|--------|---------|
@@ -87,7 +86,7 @@ Latin characters of the Serbian alphabet are defined like this...
 | U+01CB | ǋ      | 459     |
 | U+01CC | ǌ      | 460     |
 
-...and the Cyrillic characters of the Serbian alphabet are defined like this:
+...e os caracteres cirílicos do alfabeto sérvio são definidos assim:
 
 | Code   | Symbol | DEC     |
 |--------|--------|---------|
@@ -152,17 +151,16 @@ Latin characters of the Serbian alphabet are defined like this...
 | U+045F | џ      | 1119    |
 | U+0448 | ш      | 1096    |
 
-Although some Latin and Cyrillic letters appear to be the same, their Unicode
-code values are different. For example, the Latin capital letter A is encoded
-as U+0041, while the Cyrillic capital letter A is encoded as U+0410.
+Embora algumas letras latinas e cirílicas pareçam iguais, seus valores de código Unicode são diferentes.
+Por exemplo, a letra maiúscula latina A é codificada como U+0041, enquanto a letra maiúscula cirílica A é codificada como U+0410.
 
 ## Strings
 
-A string is a sequence of characters arranged in a specific order. Each
-character can be a letter, digit, punctuation mark, whitespace, or symbol.
-Strings are fundamental in computing because they represent text, file names,
-user input, and much more.
+Uma string é uma sequência de caracteres dispostos em uma ordem específica. Cada
+caractere pode ser uma letra, dígito, sinal de pontuação, espaço em branco ou símbolo.
+Strings são fundamentais na computação porque representam textos, nomes de arquivos,
+entradas de usuário e muito mais.
 
-A string is typically represented as a contiguous block of memory. Some systems
-terminate strings with a special marker like a null character `'\0'` to
-indicate the end, while others may store the length explicitly.
+Uma string é normalmente representada como um bloco contíguo de memória. Alguns sistemas
+finalizam as strings com um marcador especial, como o caractere nulo `'\0'`, para
+indicar o fim, enquanto outros podem armazenar o comprimento explicitamente.

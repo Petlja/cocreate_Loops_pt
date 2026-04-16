@@ -1,31 +1,32 @@
-# Conditions and loops
 
-To successfully master the material in the next lesson, it is necessary to know
-the basic facts about working with conditions and loops.
+# Condições e laços
 
-## Conditions
+Para dominar com sucesso o material da próxima lição, é necessário conhecer
+os fatos básicos sobre o trabalho com condições e laços.
 
-In most modern programming languages, conditional statements are used to make
-decisions and control the flow of a program. The most common constructs are:
+## Condições
+
+Na maioria das linguagens de programação modernas, as instruções condicionais são usadas para tomar
+decisões e controlar o fluxo de um programa. As construções mais comuns são:
 
 * if
 * if-else
 * switch-case
 
-Although the syntax differs between languages, the core logic is the same.
+Embora a sintaxe varie entre as linguagens, a lógica central é a mesma.
 
-### The `if` Statement
+### O comando `if`
 
-The `if` statement executes a block of code only if a specified condition is
-true.
+O comando `if` executa um bloco de código apenas se uma condição especificada for
+verdadeira.
 
 ```text
 if condition then
     statement(s)
 ```
 
-For example, in C, C++, C#, and Java, if you want check if `x` is greater than
-`0` the conditional statement can be written as:
+Por exemplo, em C, C++, C# e Java, se você quiser verificar se `x` é maior que
+`0`, a instrução condicional pode ser escrita assim:
 
 ```csharp
 int x = 5;
@@ -34,10 +35,10 @@ if (x > 0) {
 }
 ```
 
-### The `if-else` Statement
+### O comando `if-else`
 
-The if-else statement executes one block of code if the condition is true, and
-another block if it is false.
+O comando if-else executa um bloco de código se a condição for verdadeira e
+outro bloco se for falsa.
 
 ```text
 if condition then
@@ -46,8 +47,8 @@ else
     statement(s)
 ```
 
-For example, in C, C++, C#, and Java, if you want check if `x` is greater than
-`0` or not greater than `0`, the conditional statement can be written as:
+Por exemplo, em C, C++, C# e Java, se você quiser verificar se `x` é maior que
+`0` ou não, a instrução condicional pode ser escrita assim:
 
 ```csharp
 int x = 5;
@@ -58,11 +59,10 @@ if (x > 0) {
 }
 ```
 
-### The `switch-case` Statement
+### O comando `switch-case`
 
-The `switch-case` statement is useful when comparing the same variable against
-many possible values. It can be more readable than using many `if-else`
-statements.
+O comando `switch-case` é útil quando se compara a mesma variável com
+muitos valores possíveis. Pode ser mais legível do que usar muitos comandos `if-else`.
 
 ```text
 switch expression do
@@ -75,9 +75,9 @@ switch expression do
         statement(s)
 ```
 
-For example, in C, C++, C#, and Java, if you want to determine the name of the
-day based on its ordinal number in the week, the conditional statement can be
-written as:
+Por exemplo, em C, C++, C# e Java, se você quiser determinar o nome do
+dia com base no seu número ordinal na semana, a instrução condicional pode ser
+escrita assim:
 
 ```csharp
 int day = 3;
@@ -99,38 +99,39 @@ switch (day) {
 }
 ```
 
-### Nesting conditions
+### Aninhamento de condições
 
-Conditional statements can be placed inside other conditional statements - this
-is called **nesting**. Nested conditions are useful when a decision depends on
-the result of a previous decision. For example, you might first check if a user
-is logged in, and then, inside that block, check if they have permission to
-perform a certain action.
+Instruções condicionais podem ser colocadas dentro de outras instruções condicionais — isso
+é chamado de **aninhamento**. Condições aninhadas são úteis quando uma decisão depende do
+resultado de uma decisão anterior. Por exemplo, você pode primeiro verificar se um usuário
+está logado e, em seguida, dentro desse bloco, verificar se ele tem permissão para
+realizar determinada ação.
 
-## Loops
+## Laços
 
-In most modern programming languages, loops are usually implemented using one
-of the following constructs:
+Na maioria das linguagens de programação modernas, os laços geralmente são implementados usando uma
+das seguintes construções:
 
 * `for`,
-* `while` (or `while-do`),
-* `do-while` (or `repeat-until`),
-* `foreach` (or `for-each`).
+* `while` (ou `while-do`),
+* `do-while` (ou `repeat-until`),
+* `foreach` (ou `for-each`).
 
-Although the syntax differs between languages, the core logic is the same.
+Embora a sintaxe varie entre as linguagens, a lógica central é a mesma.
 
-### The `for` Loop
 
-The `for` loop is used when the number of iterations is finite and
-predetermined.
+### O laço `for`
+
+O laço `for` é usado quando o número de iterações é finito e
+pré-determinado.
 
 ```text
 for variable ← start to end do
     statement(s)
 ```
 
-For example, in C, C++, C#, and Java, a `for` loop to iterate through numbers
-from 0 to 9 can be written as:
+Por exemplo, em C, C++, C# e Java, um laço `for` para iterar pelos números
+de 0 a 9 pode ser escrito assim:
 
 ```csharp
 for (int i = 0; i <= 9; i++) {
@@ -138,19 +139,19 @@ for (int i = 0; i <= 9; i++) {
 }
 ```
 
-### The `while` Loop
+### O laço `while`
 
-The `while` (or `while-do`) loop is used when the number of iterations is
-unknown in advance. The condition is checked before each iteration, so this
-is called a **loop with a precondition**.
+O laço `while` (ou `while-do`) é usado quando o número de iterações é
+desconhecido previamente. A condição é verificada antes de cada iteração, por isso
+é chamado de **laço com pré-condição**.
 
 ```text
 while condition do
     statement(s)
 ```
 
-For example, in C, C++, C#, and Java, a `while` loop to iterate through numbers
-from 0 to 9 can be written as:
+Por exemplo, em C, C++, C# e Java, um laço `while` para iterar pelos números
+de 0 a 9 pode ser escrito assim:
 
 ```csharp
 int i = 0;
@@ -160,11 +161,11 @@ while (i <= 9) {
 }
 ```
 
-### The `do-while` Loop
+### O laço `do-while`
 
-The `do-while` (or `repeat-until`) loop also supports an unknown number of
-iterations, but the condition is checked after each iteration. This is called a
-**loop with a postcondition**, and it always executes at least once.
+O laço `do-while` (ou `repeat-until`) também suporta um número desconhecido de
+iterações, mas a condição é verificada após cada iteração. Isso é chamado de
+**laço com pós-condição**, e sempre executa pelo menos uma vez.
 
 ```text
 repeat
@@ -172,8 +173,8 @@ repeat
 until condition
 ```
 
-For example, in C, C++, C#, and Java, a `do-while` loop to iterate through
-numbers from 0 to 9 can be written as:
+Por exemplo, em C, C++, C# e Java, um laço `do-while` para iterar pelos números
+de 0 a 9 pode ser escrito assim:
 
 ```csharp
 int i = 0;
@@ -183,19 +184,19 @@ do {
 } while (i <= 9);
 ```
 
-### The `foreach` Loop
+### O laço `foreach`
 
-The `foreach` (or `for-each`) loop is used to iterate over all elements in a
-collection or array. It simplifies iteration when you don’t need to know the
-index.
+O laço `foreach` (ou `for-each`) é usado para iterar sobre todos os elementos de uma
+coleção ou array. Ele simplifica a iteração quando você não precisa saber o
+índice.
 
 ```text
 for-each element in collection do
     statement(s)
 ```
 
-For example, a `for-each` loop to iterate through array `nums` can be written
-in C++ as:
+Por exemplo, um laço `for-each` para iterar pelo array `nums` pode ser escrito
+em C++ assim:
 
 ```cpp
 int nums[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -204,7 +205,7 @@ for (int i : nums) {
 }
 ```
 
-...or in C# as...
+...ou em C# assim...
 
 ```csharp
 int[] nums = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -213,7 +214,7 @@ foreach (int i in nums) {
 }  
 ```
 
-...or in Java as:
+...ou em Java assim:
 
 ```java
 int[] nums = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -222,13 +223,12 @@ for (int i : nums) {
 }   
 ```
 
-### Nesting loops
+### Aninhamento de laços
 
-Loops can also be nested, meaning that one loop is placed inside another. This
-is common when working with multi-dimensional data, such as traversing rows and
-columns in a matrix or iterating over a grid in a game. Furthermore, loops and
-conditions can be freely combined — for example, a loop may contain an `if`
-statement to process only certain elements, or an `if` statement may contain a
-loop to perform repeated actions when a condition is true. This ability to mix
-and nest loops and conditions allows for the creation of complex algorithms
-while keeping the underlying logic structured.
+Laços também podem ser aninhados, ou seja, um laço é colocado dentro de outro. Isso
+é comum ao trabalhar com dados multidimensionais, como percorrer linhas e
+colunas em uma matriz ou iterar sobre uma grade em um jogo. Além disso, laços e
+condições podem ser combinados livremente — por exemplo, um laço pode conter uma instrução `if`
+para processar apenas certos elementos, ou uma instrução `if` pode conter um laço para realizar ações repetidas quando uma condição for verdadeira. Essa capacidade de misturar
+e aninhar laços e condições permite a criação de algoritmos complexos
+mantendo a lógica subjacente estruturada.

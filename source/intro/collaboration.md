@@ -1,19 +1,19 @@
-# Good collaboration rules
+# Boas regras de colaboração
 
-1. We are all equal and we respect one another.
-2. We foster a good atmosphere even when we think differently.
-3. We are all responsible for group work. In successful groups, all members have a sense of joint or shared responsibility for the results of group work.
-4. We help everyone contribute to group work.
-5. We strive to involve everyone in decision-making.
-6. The more ideas we consider, the more certain we are that we have selected the best one.
-7. We expound every idea, weigh arguments, and devise solutions.
-8. We wisely use our time to work on the task.
-9. We monitor our progress and contemplate our next step.
+1. Todos somos iguais e nos respeitamos mutuamente.
+2. Promovemos um bom ambiente mesmo quando pensamos de forma diferente.
+3. Todos somos responsáveis pelo trabalho em grupo. Em grupos bem-sucedidos, todos os membros têm um senso de responsabilidade conjunta ou compartilhada pelos resultados do trabalho em grupo.
+4. Ajudamos todos a contribuir para o trabalho em grupo.
+5. Procuramos envolver todos na tomada de decisões.
+6. Quanto mais ideias considerarmos, mais certeza teremos de que escolhemos a melhor.
+7. Expomos cada ideia, pesamos argumentos e elaboramos soluções.
+8. Usamos sabiamente nosso tempo para trabalhar na tarefa.
+9. Monitoramos nosso progresso e refletimos sobre o próximo passo.
 
-The successful collaboration rules have to be complied with to complete the task:
+As regras de colaboração bem-sucedida devem ser seguidas para concluir a tarefa:
 
-* Share responsibilities equally
-* Listen actively and respect each other's ideas
-* Make decisions together
-* Stay focused on the task
-* Support each other and solve problems as a pair
+* Compartilhe as responsabilidades igualmente
+* Ouça ativamente e respeite as ideias dos outros
+* Tomem decisões juntos
+* Mantenham o foco na tarefa
+* Apoiem-se mutuamente e resolvam problemas em dupla
