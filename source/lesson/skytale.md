@@ -1,29 +1,22 @@
 # Skytale
 
-After completing this lesson, you will be able to:
+Após concluir esta lição, você será capaz de:
 
-* Explain how the Skytale cipher works.
-* Implement encryption and decryption using simple array or string operations.
-* Understand how physical encryption devices can be modeled digitally.
+* Explicar como funciona a cifra Skytale.
+* Implementar criptografia e descriptografia usando operações simples de array ou string.
+* Entender como dispositivos físicos de criptografia podem ser modelados digitalmente.
 
-The Skytale is one of the oldest known tools for encryption, dating back to
-ancient Greece around 400 BC. It was a simple cylindrical device used by the
-Spartans to send secret messages during military campaigns.
+A Skytale é uma das ferramentas mais antigas conhecidas para criptografia, datando da Grécia Antiga por volta de 400 a.C. Era um dispositivo cilíndrico simples usado pelos espartanos para enviar mensagens secretas durante campanhas militares.
 
-A strip of parchment or leather was wound around a wooden rod (the *skytale*)
-of a specific diameter. The message was then written lengthwise along the rod.
-Once unwound, the letters appeared scrambled and meaningless. The recipient
-needed a rod of the **exact same diameter** to wrap the strip and read the
-original message.
+Uma tira de pergaminho ou couro era enrolada em torno de uma haste de madeira (a *skytale*) de um diâmetro específico. A mensagem era então escrita ao longo da haste. Uma vez desenrolada, as letras pareciam embaralhadas e sem sentido. O destinatário precisava de uma haste do **exato mesmo diâmetro** para enrolar a tira e ler a mensagem original.
 
-If you want to encrypt the message:
+Se você quiser criptografar a mensagem:
 
 ```text
 attackatdawn
 ```
 
-and you choose a rod that allows **4 letters per turn**, you first write the
-message vertically in columns, forming rows of length 4:
+e escolher uma haste que permita **4 letras por volta**, você primeiro escreve a mensagem verticalmente em colunas, formando linhas de comprimento 4:
 
 ```text
 a t t a
@@ -31,38 +24,31 @@ c k a t
 d a w n
 ```
 
-The ciphertext is then created by reading row by row:
+O texto cifrado é então criado lendo linha por linha:
 
 ```text
 acdtkatawatn
 ```
 
-To decrypt, the receiver rewinds the strip around a rod of the same diameter
-and reads vertically again to reconstruct the original message.
+Para descriptografar, o receptor enrola novamente a tira em uma haste do mesmo diâmetro e lê verticalmente novamente para reconstruir a mensagem original.
 
-## Simple assignment
+## Tarefa simples
 
-Create a console application in any programming language to encrypt and decrypt
-messages using the Skytale cipher.
+Crie um aplicativo de console em qualquer linguagem de programação para criptografar e descriptografar mensagens usando a cifra Skytale.
 
-The allowed alphabet for messages includes only the lowercase letters of the
-English alphabet:
+O alfabeto permitido para mensagens inclui apenas as letras minúsculas do alfabeto inglês:
 
 ```text
 Σ = { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }
 ```
 
-Spaces, uppercase letters, numbers, and other characters are not allowed.
+Espaços, letras maiúsculas, números e outros caracteres não são permitidos.
 
-In the first line of the user input there will be a message `m` no longer than
-one hundred characters. In the second line there will be an integer `k` (the
-number of columns – circumference of the rod). In the third line there will be
-an integer `s`, which represents the operation. If $s=1$, then `m` should be
-encrypted. If $s=2$, then `m` should be decrypted.
+Na primeira linha da entrada do usuário haverá uma mensagem `m` com no máximo cem caracteres. Na segunda linha haverá um inteiro `k` (o número de colunas – circunferência da haste). Na terceira linha haverá um inteiro `s`, que representa a operação. Se $s=1$, então `m` deve ser criptografada. Se $s=2$, então `m` deve ser descriptografada.
 
-### Test example 1
+### Exemplo de teste 1
 
-If the input is:
+Se a entrada for:
 
 ```text
 attackatdawn
@@ -70,15 +56,15 @@ attackatdawn
 1
 ```
 
-the output should be:
+a saída deve ser:
 
 ```text
 acdtkatawatn
 ```
 
-### Test example 2
+### Exemplo de teste 2
 
-If the input is:
+Se a entrada for:
 
 ```text
 acdtkatawatn
@@ -86,44 +72,38 @@ acdtkatawatn
 2
 ```
 
-the output should be:
+a saída deve ser:
 
 ```text
 attackatdawn
 ```
 
-## Start the assignment
+## Inicie a tarefa
 
-[Implement the cypher here ](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142946)
+[Implemente a cifra aqui ](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142946)
 
-## Solution hints
+## Dicas de solução
 
-For **encryption**, write the plaintext vertically into a table with `k`
-columns. Read the table row by row to form the ciphertext. For **decryption**,
-write the ciphertext row by row into a table with `k` columns, read the table
-vertically to reconstruct plaintext.
+Para **criptografar**, escreva o texto simples verticalmente em uma tabela com `k` colunas. Leia a tabela linha por linha para formar o texto cifrado. Para **descriptografar**, escreva o texto cifrado linha por linha em uma tabela com `k` colunas e leia a tabela verticalmente para reconstruir o texto simples.
 
-## Advanced Skytale Assignments (optional)
+## Tarefas avançadas de Skytale (opcional)
 
-### Expand the allowed alphabet
+### Expanda o alfabeto permitido
 
-Include uppercase letters, spaces, numbers, and punctuation.
+Inclua letras maiúsculas, espaços, números e pontuação.
 
-### Use functions
+### Use funções
 
-Create `encrypt()` and `decrypt()` functions to keep the code modular.
+Crie funções `encrypt()` e `decrypt()` para manter o código modular.
 
-### Create a Class
+### Crie uma Classe
 
-Implement a `SkytaleCipher` class that stores `k` and provides methods for
-encryption and decryption.
+Implemente uma classe `SkytaleCipher` que armazene `k` e forneça métodos para criptografia e descriptografia.
 
-### Encrypt and Decrypt Files
+### Criptografe e Descriptografe Arquivos
 
-Modify the program to read plaintext or ciphertext from a file and write
-results to another file.
+Modifique o programa para ler o texto simples ou cifrado de um arquivo e escrever os resultados em outro arquivo.
 
-### Handle incomplete rows
+### Trate linhas incompletas
 
-Modify your program so that if the last row is shorter than `k`, it still
-encrypts and decrypts correctly by handling missing characters or padding.
+Modifique seu programa para que, se a última linha for mais curta que `k`, ainda criptografe e descriptografe corretamente, tratando caracteres ausentes ou preenchendo com padding.

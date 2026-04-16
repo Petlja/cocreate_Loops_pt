@@ -1,67 +1,46 @@
-# Caesar Cipher
+# Cifra de César
 
-One of the great generals who used coded messages was Julius Caesar, around 50
-BC. When Caesar sent messages to his generals, he encrypted them by shifting
-the letters in the text by a fixed number of places in the alphabet. The
-recipients of the message could decipher it because they knew the shift value
-— while everyone else saw only meaningless text.
+Um dos grandes generais que usava mensagens codificadas foi Júlio César, por volta de 50 a.C. Quando César enviava mensagens para seus generais, ele as criptografava deslocando as letras do texto por um número fixo de posições no alfabeto. Os destinatários da mensagem podiam decifrá-la porque sabiam o valor do deslocamento — enquanto todos os outros viam apenas um texto sem sentido.
 
-For example, if you wrote `NIKOLATESLA` and shifted each letter three places to
-the right:
+Por exemplo, se você escrever `NIKOLATESLA` e deslocar cada letra três posições para a direita:
 
 ```text
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 X Y Z A B C D E F G H I J K L M N O P Q R S T U V W
 ```
 
-The letter `N` becomes `K`, `I` becomes `F`, and so on. So, each letter is
-replaced by another letter that is a fixed number of positions further along in
-the alphabet. When the end of the alphabet is reached, the sequence continues
-from the beginning. The result of the shift operation by three letters to the
-right would be the encrypted message `KFHLIXQBPIX`. On the other hand, if each
-letter in the resulting word were shifted three letters to the left:
+A letra `N` vira `K`, `I` vira `F` e assim por diante. Assim, cada letra é substituída por outra letra que está um número fixo de posições à frente no alfabeto. Quando o final do alfabeto é alcançado, a sequência continua do início. O resultado do deslocamento de três letras para a direita seria a mensagem criptografada `KFHLIXQBPIX`. Por outro lado, se cada letra da palavra resultante fosse deslocada três letras para a esquerda:
 
 ```text
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
 ```
 
-The letter `K` becomes `N`, `F` becomes `I`, and so on. The result of the shift
-operation would be the original decrypted message `NIKOLATESLA`.
+A letra `K` vira `N`, `F` vira `I` e assim por diante. O resultado do deslocamento seria a mensagem original descriptografada `NIKOLATESLA`.
 
 ![Caesar Cipher Left Shift](./images/caesar1.png)
 
-## Simple assignment
+## Tarefa simples
 
-Create a console application in any programming language to encrypt and decrypt
-messages using the Caesar cipher.
+Crie um aplicativo de console em qualquer linguagem de programação para criptografar e descriptografar mensagens usando a cifra de César.
 
 ```{infonote}
-First student (*the driver*) should be focused on syntax while writing the
-code for message encryption. Second student (*the navigator*) should review
-each line of code as it is typed, looking for the mistakes, asking questions,
-and suggesting improvements. After that, the students should switch roles,
-and continue with writing decryption code.
+O primeiro aluno (*o driver*) deve focar na sintaxe ao escrever o código para criptografia da mensagem. O segundo aluno (*o navegador*) deve revisar cada linha de código à medida que é digitada, procurando erros, fazendo perguntas e sugerindo melhorias. Depois disso, os alunos devem trocar de papéis e continuar escrevendo o código de descriptografia.
 ```
 
-The allowed alphabet for messages (for plaintext and ciphertext) can include
-only lowercase letters of the English alphabet:
+O alfabeto permitido para mensagens (tanto para texto simples quanto para texto cifrado) pode incluir apenas letras minúsculas do alfabeto inglês:
 
 ```text
 Σ = { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }
 ```
 
-Spaces, uppercase letters, numbers, and other characters are not allowed.
+Espaços, letras maiúsculas, números e outros caracteres não são permitidos.
 
-In the first line of the user input there will be a message `m` no longer than
-one hundred characters, in the second line there will be an integer `n` which
-represents the shift value ($1 \leq n < 26$), and in the third line there will
-be an integer `s`, which represents the encryption direction. If $s=1$ then `m`
-should be encrypted, and if $s=2$, then `m` should be decrypted.
+Na primeira linha da entrada do usuário haverá uma mensagem `m` com no máximo cem caracteres, na segunda linha haverá um inteiro `n` que representa o valor do deslocamento ($1 \leq n < 26$), e na terceira linha haverá um inteiro `s`, que representa a direção da criptografia. Se $s=1$ então `m` deve ser criptografada, e se $s=2$, então `m` deve ser descriptografada.
 
-### Test example 1
+### Exemplo de teste 1
 
-If the input is:
+Se a entrada for:
 
 ```text
 nikolatesla
@@ -69,15 +48,15 @@ nikolatesla
 1
 ```
 
-the output should be:
+a saída deve ser:
 
 ```text
 kfhlixqbpix
 ```
 
-### Test example 2
+### Exemplo de teste 2
 
-If the input is:
+Se a entrada for:
 
 ```text
 kfhlixqbpix
@@ -85,20 +64,19 @@ kfhlixqbpix
 2
 ```
 
-the output should be:
+a saída deve ser:
 
 ```text
 nikolatesla
 ```
 
-## Start the assignment
+## Inicie a tarefa
 
-[Implement the cypher here ](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142923)
+[Implemente a cifra aqui ](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142923)
 
-## Solution hints
+## Dicas de solução
 
-Since there are 26 letters in the English alphabet, the position of each letter
-can be represented by a number from 0 to 25.
+Como existem 26 letras no alfabeto inglês, a posição de cada letra pode ser representada por um número de 0 a 25.
 
 * a → 0
 * b → 1
@@ -106,81 +84,60 @@ can be represented by a number from 0 to 25.
 * ...
 * z → 25
 
-To **encrypt** a letter, you can use the following formula:
+Para **criptografar** uma letra, você pode usar a seguinte fórmula:
 
 ```text
-new_letter_position = (current_letter_position + shift_value) mod 26
+nova_posicao_letra = (posicao_atual_letra + valor_deslocamento) mod 26
 ```
 
-`original_position` represents the numeric value of the letter in the alphabet,
-`shift_value` represents number of positions to move (1–25), and `mod 26`
-ensures that the result wraps around to the start of the alphabet if it goes
-past `z`.
+`posicao_original` representa o valor numérico da letra no alfabeto, `valor_deslocamento` representa o número de posições a mover (1–25), e `mod 26` garante que o resultado volte ao início do alfabeto se ultrapassar `z`.
 
-To **decrypt** a letter, you can use the following formula:
+Para **descriptografar** uma letra, você pode usar a seguinte fórmula:
 
 ```text
-new_letter_position = (current_letter_position - shift_value + 26) mod 26
+nova_posicao_letra = (posicao_atual_letra - valor_deslocamento + 26) mod 26
 ```
 
-Similarly like encryption, but you subtract the shift value, and `+ 26` ensures
-that the value does not become negative before applying `mod 26`.
+Semelhante à criptografia, mas você subtrai o valor do deslocamento, e `+ 26` garante que o valor não fique negativo antes de aplicar o `mod 26`.
 
-## Advanced Caesar Cipher Assignments (optional)
+## Tarefas avançadas de Cifra de César (opcional)
 
-### Expand the allowed aplhabet
+### Expanda o alfabeto permitido
 
-Create a console application in any programming language to encrypt and decrypt
-messages using the Caesar cipher. The allowed alphabet for messages (for
-plaintext and ciphertext) can include lowercase and uppercase letters of the
-English alphabet, spaces, numbers, and punctuation!
+Crie um aplicativo de console em qualquer linguagem de programação para criptografar e descriptografar mensagens usando a cifra de César. O alfabeto permitido para mensagens (texto simples e texto cifrado) pode incluir letras minúsculas e maiúsculas do alfabeto inglês, espaços, números e pontuação!
 
-The application must encrypt or decrypt only lowercase and uppercase letters.
-Spaces, numbers, and punctuation marks should remain unchanged during
-encryption or decryption.
+O aplicativo deve criptografar ou descriptografar apenas letras minúsculas e maiúsculas. Espaços, números e sinais de pontuação devem permanecer inalterados durante a criptografia ou descriptografia.
 
-In the first line of the standard input there will be a message `m` no longer
-than one hundred characters, in the second line there will be an integer `n`
-which represents the shift ($1 \leq n < 26$), and in the third line there will
-be an integer `s`, which represents the encryption direction. If $s=1$ then `m`
-should be encrypted, and if $s=2$, then `m` should be decrypted.
+Na primeira linha da entrada padrão haverá uma mensagem `m` com no máximo cem caracteres, na segunda linha haverá um inteiro `n` que representa o deslocamento ($1 \leq n < 26$), e na terceira linha haverá um inteiro `s`, que representa a direção da criptografia. Se $s=1$ então `m` deve ser criptografada, e se $s=2$, então `m` deve ser descriptografada.
 
-## Use the functions
+## Use funções
 
-Create two functions: one for encrypting messages and one for decrypting
-messages. Use the created functions in your main program.
+Crie duas funções: uma para criptografar mensagens e outra para descriptografar mensagens. Use as funções criadas em seu programa principal.
 
-## Create a Class
+## Crie uma Classe
 
-Create a `CaesarCipher` class that contains:
+Crie uma classe `CaesarCipher` que contenha:
 
-* a constructor with a parameter that accepts the shift value and ensures that
-the value is within the allowed range,
-* a private property to store the shift value, with getter and setter methods,
-* a public method to encrypt the message,
-* a public method to decrypt the message, and
-* optionally, include a private method to process messages, which will be used
-by both encryption and decryption methods.
+* um construtor com um parâmetro que aceita o valor do deslocamento e garante que o valor esteja dentro do intervalo permitido,
+* uma propriedade privada para armazenar o valor do deslocamento, com métodos getter e setter,
+* um método público para criptografar a mensagem,
+* um método público para descriptografar a mensagem, e
+* opcionalmente, inclua um método privado para processar mensagens, que será usado tanto pelos métodos de criptografia quanto de descriptografia.
 
-Use the created class in your main program.
+Use a classe criada em seu programa principal.
 
-## Accept Command Line Arguments
+## Aceite argumentos de linha de comando
 
-Instead of waiting for the user input, create a console application that
-accepts the following command line arguments:
+Em vez de esperar pela entrada do usuário, crie um aplicativo de console que aceite os seguintes argumentos de linha de comando:
 
-1. argument `m` for specifying the message,
-2. argument `n` for specifying the shift value (`0` to `25`), and
-3. argument `s` for specifying the shift direction (`1` for encryption, and `2`
-for decryption).
+1. argumento `m` para especificar a mensagem,
+2. argumento `n` para especificar o valor do deslocamento (`0` a `25`), e
+3. argumento `s` para especificar a direção do deslocamento (`1` para criptografia e `2` para descriptografia).
 
-## Encrypt and decrypt files
+## Criptografe e descriptografe arquivos
 
-Use the knowledge you gained so far to create a console application for
-encrypting and decrypting text files. Your application should accept the
-following command line arguments:
+Use o conhecimento adquirido até agora para criar um aplicativo de console para criptografar e descriptografar arquivos de texto. Seu aplicativo deve aceitar os seguintes argumentos de linha de comando:
 
-1. argument `m` for specifying the filename (or a path),
-2. argument `n` for specifying the shift value (`0` to `25`), and
-3. argument `s` for specifying the shift direction (`1` for encryption, and `2`
-for decryption).
+1. argumento `m` para especificar o nome do arquivo (ou um caminho),
+2. argumento `n` para especificar o valor do deslocamento (`0` a `25`), e
+3. argumento `s` para especificar a direção do deslocamento (`1` para criptografia e `2` para descriptografia).

@@ -1,101 +1,72 @@
-# A Very Short Introduction to Cryptography
+# Uma Brevíssima Introdução à Criptografia
 
-Since ancient times, when people began to write, there has been a need to keep
-some written text secret. By devising techniques to hide recorded information,
-a new scientific field emerged – cryptography.
+Desde os tempos antigos, quando as pessoas começaram a escrever, surgiu a necessidade de manter
+alguns textos escritos em segredo. Ao criar técnicas para ocultar informações registradas,
+um novo campo científico surgiu – a criptografia.
 
-> **Cryptography** is a scientific discipline that deals with the development
-> of systems for encrypting information. The word cryptography comes from the
-> Greek words kryptós (*hidden, secret*) and graphein (*to write*).
+> **Criptografia** é uma disciplina científica que trata do desenvolvimento
+de sistemas para criptografar informações. A palavra criptografia vem das
+palavras gregas kryptós (*oculto, secreto*) e graphein (*escrever*).
 
-In India, 2000-year-old writings speak of two types of encryption – the first
-type was based on the substitution of letters based on their phonetic
-relationships, and the second on a coded alphabet by pairing letters and using
-reciprocal letters. In Persia, modern-day Iran, there were also two types of
-encryption – the first royal script was used for official correspondence within
-the kingdom, and the second for communication with other states.
+Na Índia, escritos de 2000 anos atrás falam de dois tipos de criptografia – o primeiro
+tipo era baseado na substituição de letras com base em suas relações fonéticas,
+e o segundo em um alfabeto codificado por emparelhamento de letras e uso de
+letras recíprocas. Na Pérsia, atual Irã, também havia dois tipos de criptografia – o primeiro
+escrito real era usado para correspondência oficial dentro do reino, e o segundo para comunicação com outros estados.
 
-The first book on cryptography, entitled "The Book of Cryptographic Messages"
-according to historical sources, was written by the Arab philosopher Al-Khalil
-(717–786), in which permutations and combinations are used for the first time
-to list all Arabic words with and without vowels. However, classical encryption
-methods often reveal statistical patterns about the original message, which can
-be exploited to break the cipher.
+O primeiro livro sobre criptografia, intitulado "O Livro das Mensagens Criptográficas"
+segundo fontes históricas, foi escrito pelo filósofo árabe Al-Khalil
+(717–786), no qual permutações e combinações são usadas pela primeira vez
+para listar todas as palavras árabes com e sem vogais. No entanto, métodos clássicos de criptografia
+costumam revelar padrões estatísticos sobre a mensagem original, que podem
+ser explorados para quebrar a cifra.
 
-![Kindi's manuscript on deciphering cryptographic messages](./images/kindi.jpg)
+![Manuscrito de Kindi sobre decifração de mensagens criptográficas](./images/kindi.jpg)
 
-After the discovery of frequency analysis of letters in a message, the Arab
-mathematician Al-Kindi wrote the book "Manuscript for the Decipherment of
-Cryptographic Messages" in the ninth century, in which the use of frequency
-analysis techniques was first described.
+Após a descoberta da análise de frequência das letras em uma mensagem, o matemático árabe Al-Kindi escreveu o livro "Manuscrito para a Decifração de Mensagens Criptográficas" no século IX, no qual o uso de técnicas de análise de frequência foi descrito pela primeira vez.
 
-> **Cryptanalysis** is the scientific discipline that studies methods for
-> "breaking" cryptographic systems. The word cryptanalysis comes from the Greek
-> words kryptós (*hidden, secret*) and analýein (*analysis*).
+> **Criptoanálise** é a disciplina científica que estuda métodos para
+> "quebrar" sistemas criptográficos. A palavra criptoanálise vem das palavras gregas
+> kryptós (*oculto, secreto*) e analýein (*análise*).
 
-The first known treatise on cryptography was written in 25 pages by the Italian
-architect Leone Battista Alberti in 1467. He is also the creator of the cipher
-circle and other solutions for double-layered text concealment. Half a century
-later, Johannes Trithemus' work on cryptography was published in five volumes.
-In the 16th century, significant contributions were made by the Milanese doctor
-Girolamo Cardano, the mathematician Battista Porta, and the French diplomat
-Blaise de Vigenere.
+O primeiro tratado conhecido sobre criptografia foi escrito em 25 páginas pelo arquiteto italiano Leone Battista Alberti em 1467. Ele também é o criador do círculo de cifras e de outras soluções para ocultação de texto em duas camadas. Meio século depois, o trabalho de Johannes Trithemus sobre criptografia foi publicado em cinco volumes. No século XVI, contribuições significativas foram feitas pelo médico milanês Girolamo Cardano, pelo matemático Battista Porta e pelo diplomata francês Blaise de Vigenere.
 
-![XVI Century Book-shaped French Cipher Machine](./images/cyphermachine.jpg)
+![Máquina francesa de cifras em forma de livro do século XVI](./images/cyphermachine.jpg)
 
-In the 19th century, it was concluded that cryptography should not rely on the
-secrecy of the encryption algorithms, but on the secrecy of the key. The
-secrecy of the key itself must be sufficient to prevent the encrypted message
-from being broken. This became one of the fundamental principles of
-cryptography, written down in 1883 by Auguste Kerckhoffs (Kerckhoffs's
-Principle). More explicitly, it was reiterated by Claude Shannon, the founder
-of Information Theory and a key figure in theoretical cryptography, as
-Shannon's Maxim: "the enemy knows the system".
+No século XIX, concluiu-se que a criptografia não deveria depender do segredo dos algoritmos de criptografia, mas sim do segredo da chave. O segredo da própria chave deve ser suficiente para impedir que a mensagem criptografada seja quebrada. Isso se tornou um dos princípios fundamentais da criptografia, registrado em 1883 por Auguste Kerckhoffs (Princípio de Kerckhoffs). Mais explicitamente, foi reiterado por Claude Shannon, o fundador da Teoria da Informação e figura-chave na criptografia teórica, como o Máximo de Shannon: "o inimigo conhece o sistema".
 
-During World War II, the Germans built a machine called the Enigma that
-encrypted messages in a way never seen before. However, as revolutionary as it
-was at the time, the Allies, led by Alan Turing, were able to break the Enigma
-cryptographic system through cryptanalysis.
+Durante a Segunda Guerra Mundial, os alemães construíram uma máquina chamada Enigma que criptografava mensagens de uma forma nunca vista antes. No entanto, por mais revolucionária que fosse na época, os Aliados, liderados por Alan Turing, conseguiram quebrar o sistema criptográfico da Enigma por meio da criptoanálise.
 
 ![Enigma](./images/enigma.jpg)
 
-Cryptography and cryptanalysis are the two main disciplines of cryptology.
+Criptografia e criptoanálise são as duas principais disciplinas da criptologia.
 
-> **Cryptology** is the science that deals with various aspects of information
-> security. The word cryptology comes from the Greek words kryptós (*hidden,
-> secret*) and logos (*science*).
+> **Criptologia** é a ciência que trata de vários aspectos da segurança da informação. A palavra criptologia vem das palavras gregas kryptós (*oculto, secreto*) e logos (*ciência*).
 
-## Present
+## Presente
 
-After World War II, with the development of information technology, cryptology
-and its scientific disciplines became increasingly important. Modern computers
-can break simple ciphers at incredible speeds, so cryptographic algorithms have
-become much more advanced. Today, cryptography is generally divided into
-**symmetric** encryption, where the same key is used for both encryption and
-decryption...
+Após a Segunda Guerra Mundial, com o desenvolvimento da tecnologia da informação, a criptologia
+e suas disciplinas científicas tornaram-se cada vez mais importantes. Computadores modernos
+podem quebrar cifras simples em velocidades incríveis, então os algoritmos criptográficos se tornaram muito mais avançados. Hoje, a criptografia é geralmente dividida em
+**criptografia simétrica**, onde a mesma chave é usada tanto para criptografar quanto para descriptografar...
 
-![Symmetric encryption](./images/symmetric.png)
+![Criptografia simétrica](./images/symmetric.png)
 
-...and **asymmetric** encryption, where a pair of public and private keys is
-used:
+...e **criptografia assimétrica**, onde um par de chaves pública e privada é usado:
 
-![Asymmetric encryption](./images/asymmetric.png)
+![Criptografia assimétrica](./images/asymmetric.png)
 
-Another essential tool is the cryptographic hash function, which creates a
-unique digital fingerprint of data and is widely used in password protection,
-digital signatures, and blockchain technology.
+Outra ferramenta essencial é a função hash criptográfica, que cria uma
+impressão digital única dos dados e é amplamente utilizada na proteção de senhas,
+assinaturas digitais e tecnologia blockchain.
 
-## The Future
+## O Futuro
 
-Looking ahead, quantum cryptography is expected to become a foundation of
-secure communication. It is based on the Heisenberg uncertainty principle of
-quantum physics. However, quantum computing also poses a threat to many
-cryptographic algorithms in use today, which has led to the development of
-post-quantum cryptography.
+Olhando para o futuro, espera-se que a criptografia quântica se torne a base da comunicação segura. Ela se baseia no princípio da incerteza de Heisenberg da física quântica. No entanto, a computação quântica também representa uma ameaça para muitos algoritmos criptográficos atualmente em uso, o que levou ao desenvolvimento da criptografia pós-quântica.
 
 ![Google Quantum AI](./images/google.jpg)
 
-The importance of cryptology in modern society cannot be overstated.
-Cryptographic systems ensure the privacy of electronic communications,
-enable secure e-commerce, protect cryptocurrencies, and in some countries
-even safeguard electronic voting and vote counting.
+A importância da criptologia na sociedade moderna não pode ser subestimada.
+Sistemas criptográficos garantem a privacidade das comunicações eletrônicas,
+tornam possível o comércio eletrônico seguro, protegem criptomoedas e, em alguns países,
+chegam a proteger a votação eletrônica e a contagem de votos.

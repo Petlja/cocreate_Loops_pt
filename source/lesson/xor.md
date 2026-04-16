@@ -1,8 +1,8 @@
 # XOR
 
-XOR *(Exclusive OR)* is a logical operation that outputs true (1) only when
-inputs differ. It's a fundamental binary operation with important applications
-in computer science and cryptography.
+XOR *(OU Exclusivo)* é uma operação lógica que retorna verdadeiro (1) apenas quando
+as entradas são diferentes. É uma operação binária fundamental com aplicações importantes
+em ciência da computação e criptografia.
 
 | A | B | A XOR B |
 | - | - | :-----: |
@@ -11,10 +11,10 @@ in computer science and cryptography.
 | 1 | 0 | 1       |
 | 1 | 1 | 0       |
 
-For example, to encrypt the word "HELLO" using the key "KEY", you should first
-convert `HELLO` to binary...
+Por exemplo, para criptografar a palavra "HELLO" usando a chave "KEY", você deve primeiro
+converter `HELLO` para binário...
 
-| Char | ASCII | Binary   |
+| Caractere | ASCII | Binário   |
 | ---- | ----- | -------- |
 | H    | 72    | 01001000 |
 | E    | 69    | 01000101 |
@@ -22,16 +22,16 @@ convert `HELLO` to binary...
 | L    | 76    | 01001100 |
 | O    | 79    | 01001111 |
 
-...then convert `KEY` to binary...
+...depois converter `KEY` para binário...
 
-| Char | ASCII | Binary   |
+| Caractere | ASCII | Binário   |
 | ---- | ----- | -------- |
 | K    | 75    | 01001011 |
 | E    | 69    | 01000101 |
 | Y    | 89    | 01011001 |
 
-...and finally do the encryption - XOR each character with key, repeating the
-key as many times as necessary:
+...e finalmente fazer a criptografia — aplicar XOR em cada caractere com a chave, repetindo a
+chave quantas vezes for necessário:
 
 ```text
 H ⊕ K: 01001000 ⊕ 01001011 = 00000011 (ASCII 3)
@@ -41,12 +41,11 @@ L ⊕ K: 01001100 ⊕ 01001011 = 00000111 (ASCII 7)
 O ⊕ E: 01001111 ⊕ 01000101 = 00001010 (ASCII 10)
 ```
 
-The resulting ciphertext consists of ASCII non-printable characters with
-decimal values 3, 0, 21, 7, and 10. If an attacker intercepted this message,
-they would see only unreadable binary data, since the characters are
-non-printable.
+O texto cifrado resultante consiste em caracteres ASCII não imprimíveis com
+valores decimais 3, 0, 21, 7 e 10. Se um atacante interceptasse essa mensagem,
+ele veria apenas dados binários ilegíveis, já que os caracteres não são imprimíveis.
 
-To decrypt the ciphertext you should XOR ciphertext with same key:
+Para descriptografar o texto cifrado, basta aplicar XOR novamente com a mesma chave:
 
 ```text
 3  ⊕ K: 00000011 ⊕ 01001011 = 01001000 (ASCII 72 → H)
@@ -56,40 +55,35 @@ To decrypt the ciphertext you should XOR ciphertext with same key:
 10 ⊕ E: 00001010 ⊕ 01000101 = 01001111 (ASCII 79 → O)
 ```
 
-The XOR operation is self-inverse — applying XOR twice with the same key
-restores the original data.
+A operação XOR é auto-inversa — aplicar XOR duas vezes com a mesma chave
+restaura os dados originais.
 
-In real-world applications, reusing the same key for multiple messages makes
-XOR encryption vulnerable to frequency analysis and known-plaintext attacks.
-XOR alone doesn’t provide strong security unless the key is properly managed
-and is at least as long as the message — as in a one-time pad. However, for
-educational purposes and basic demonstrations of cryptographic principles, XOR
-is simple and ideal.
+Em aplicações reais, reutilizar a mesma chave para várias mensagens torna a
+criptografia XOR vulnerável à análise de frequência e a ataques de texto conhecido.
+O XOR sozinho não fornece segurança forte, a menos que a chave seja gerenciada corretamente
+e tenha pelo menos o mesmo tamanho da mensagem — como em uma one-time pad (chave descartável). No entanto, para fins educacionais e demonstrações básicas de princípios criptográficos, o XOR
+é simples e ideal.
 
-## Simple assignment
+## Tarefa simples
 
-Create a console application in any programming language to encrypt and decrypt
-messages using the XOR operation.
+Crie um aplicativo de console em qualquer linguagem de programação para criptografar e descriptografar
+mensagens usando a operação XOR.
 
-The allowed alphabet for messages (both plaintext and key) includes only
-lowercase English letters:
+O alfabeto permitido para mensagens (tanto texto simples quanto chave) inclui apenas
+letras minúsculas do inglês:
 
 ```text
 Σ = { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }
 ```
 
-Spaces, uppercase letters, numbers, and other characters are not allowed.
+Espaços, letras maiúsculas, números e outros caracteres não são permitidos.
 
-In the first line of the user input there will be a message `m` no longer than
-one hundred ASCII characters for plaintext or 800 bits for ciphertext, in the
-second line there will be a key `k` no longer than five characters, and in the
-third line there will be an integer `s`, which represents the operation. If
-$s=1$ then `m` is plaintext and should be encrypted, and if $s=2$, then `m` is
-ciphertext in binary and should be decrypted.
+Na primeira linha da entrada do usuário haverá uma mensagem `m` com no máximo
+cem caracteres ASCII para texto simples ou 800 bits para texto cifrado, na segunda linha haverá uma chave `k` com no máximo cinco caracteres, e na terceira linha haverá um inteiro `s`, que representa a operação. Se $s=1$ então `m` é texto simples e deve ser criptografada, e se $s=2$, então `m` é texto cifrado em binário e deve ser descriptografada.
 
-### Test example 1
+### Exemplo de teste 1
 
-If the input is:
+Se a entrada for:
 
 ```text
 nikolatesla
@@ -97,15 +91,15 @@ ser
 1
 ```
 
-the output should be:
+a saída deve ser:
 
 ```text
 0001110100001100000110010001110000001001000100110000011100000000000000010001111100000100
 ```
 
-### Test example 2
+### Exemplo de teste 2
 
-If the input is:
+Se a entrada for:
 
 ```text
 0001110100001100000110010001110000001001000100110000011100000000000000010001111100000100
@@ -113,63 +107,57 @@ ser
 2
 ```
 
-the output should be:
+a saída deve ser:
 
 ```text
 nikolatesla
 ```
 
-## Start the assignment
+## Inicie a tarefa
 
-[Implement the cypher here ](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142947)
+[Implemente a cifra aqui ](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142947)
 
-## Solution hints
+## Dicas de solução
 
-Each character is stored in memory as an 8-bit ASCII value (for lowercase
-letters a–z, the codes range from 97 to 122). To encrypt a character, take its
-ASCII value and the ASCII value of the corresponding key character (cycling
-through the key), apply XOR (^) between them and output the result as an 8-bit
-binary number.
+Cada caractere é armazenado na memória como um valor ASCII de 8 bits (para letras minúsculas a–z, os códigos variam de 97 a 122). Para criptografar um caractere, pegue seu valor ASCII e o valor ASCII do caractere correspondente da chave (ciclando pela chave), aplique XOR (^) entre eles e exiba o resultado como um número binário de 8 bits.
 
-To decrypt, follow the reverse process, take each 8-bit binary block from
-ciphertext, convert it back to an integer (0–255), XOR with the ASCII value of
-the corresponding key character and convert the result back to a character.
+Para descriptografar, siga o processo inverso: pegue cada bloco binário de 8 bits do texto cifrado, converta de volta para um inteiro (0–255), aplique XOR com o valor ASCII do caractere correspondente da chave e converta o resultado de volta para um caractere.
 
-## Advanced XOR Assignments (optional)
+## Tarefas avançadas de XOR (opcional)
 
-### Expand the allowed alphabet
+### Expanda o alfabeto permitido
 
-Allow lowercase and uppercase letters, spaces, numbers, and punctuation.
-Non-letter characters are XORed with the key in the same way.
+Permita letras minúsculas e maiúsculas, espaços, números e pontuação.
+Caracteres não-letras são criptografados com a chave da mesma forma.
 
-## Use functions
+## Use funções
 
-Create two functions: `encrypt()` for encrypting messages and `decrypt()` for
-decrypting messages. Use the created functions in your main program.
+Crie duas funções: `encrypt()` para criptografar mensagens e `decrypt()` para
+descriptografar mensagens. Use as funções criadas em seu programa principal.
 
-### Create a Class
+### Crie uma Classe
 
-Create an `XorCipher` class that:
+Crie uma classe `XorCipher` que:
 
-* Stores the key,
-* Provides `encrypt()` and `decrypt()` methods,
-* Optionally includes a private helper to repeat the key over the message length.
+* Armazene a chave,
+* Forneça métodos `encrypt()` e `decrypt()`,
+* Opcionalmente inclua um método auxiliar privado para repetir a chave ao longo do comprimento da mensagem.
 
-Use the created class in your main program.
+Use a classe criada em seu programa principal.
 
-### Accept Command Line Arguments
+### Aceite argumentos de linha de comando
 
-Instead of waiting for the user input, create a console application that
-accepts the following command line arguments:
+Em vez de esperar pela entrada do usuário, crie um aplicativo de console que
+aceite os seguintes argumentos de linha de comando:
 
-1. argument `m` for specifying the message,
-2. argument `k` for specifying the key, and
-3. argument `s` for specifying the operation (`1` to encrypt, `2` to decrypt).
+1. argumento `m` para especificar a mensagem,
+2. argumento `k` para especificar a chave, e
+3. argumento `s` para especificar a operação (`1` para criptografar, `2` para descriptografar).
 
-### Encrypt and Decrypt Files
+### Criptografe e Descriptografe Arquivos
 
-Use the knowledge you gained so far to create a program that can:
+Use o conhecimento adquirido até agora para criar um programa que possa:
 
-* read plaintext or binary ciphertext from a file,
-* encrypt or decrypt it with a given key, and
-* write the result back to a new file.
+* ler texto simples ou texto cifrado binário de um arquivo,
+* criptografar ou descriptografar com uma chave fornecida, e
+* escrever o resultado em um novo arquivo.

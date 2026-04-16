@@ -1,7 +1,7 @@
 ---
 status: exclude
 ---
-# Lesson
+# Lição
 
 ```{toctree}
 :maxdepth: 2
