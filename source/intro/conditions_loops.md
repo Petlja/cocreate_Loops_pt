@@ -1,8 +1,18 @@
 
 # Condições e laços
 
-Para dominar com sucesso o material da próxima lição, é necessário conhecer
-os fatos básicos sobre o trabalho com condições e laços.
+Para dominar com sucesso o material sobre criptografia, é necessário conhecer os fatos básicos sobre o trabalho com condições e laços. Condições e laços são mecanismos fundamentais que permitem aos programas de computador tomar decisões e repetir determinadas ações. Graças às condições, um programa pode reagir de forma diferente dependendo dos dados recebidos, enquanto os laços permitem a repetição eficiente dos mesmos passos várias vezes. Esses conceitos são essenciais na criptografia, pois os algoritmos de proteção de dados baseiam-se em um conjunto de regras, verificações e procedimentos repetitivos que garantem a segurança das informações.
+
+Vamos relembrar os fundamentos básicos! Se esta área ainda não estiver clara para você, consulte a lição dedicada a este tema na Petlja.
+
+Link para a lição da Petlja sobre laços: [aqui](https://petlja.org/en/biblioteka/r/lekcije/python-za-svakog/01_karel_eng_02_for)
+<!--Link for Serbian versions of the course https://www.petlja.org/sr-Latn-RS/kurs/477/12/5844 -->
+
+```{learnmorenote} Para os professores
+
+Link para a lição da Petlja em sérvio: https://www.petlja.org/sr-Latn-RS/kurs/477/12/5844
+Link para versões do curso que não são em sérvio: https://petlja.org/en/biblioteka/r/lekcije/python-za-svakog/01_karel_eng_02_for
+```
 
 ## Condições
 

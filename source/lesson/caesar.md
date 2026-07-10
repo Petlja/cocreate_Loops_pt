@@ -20,9 +20,9 @@ A letra `K` vira `N`, `F` vira `I` e assim por diante. O resultado do deslocamen
 
 ![Caesar Cipher Left Shift](./images/caesar1.png)
 
-## Tarefa simples
+## Tarefa para Pensar
 
-Crie um aplicativo de console em qualquer linguagem de programação para criptografar e descriptografar mensagens usando a cifra de César.
+Pense em como você criaria um aplicativo de console em qualquer linguagem de programação para criptografar e descriptografar mensagens usando a cifra de César. Algumas dicas são fornecidas a seguir. Depois de lê-las, tente criar o aplicativo de console no ambiente de desenvolvimento que você usa nas aulas de programação.
 
 ```{infonote}
 O primeiro aluno (*o driver*) deve focar na sintaxe ao escrever o código para criptografia da mensagem. O segundo aluno (*o navegador*) deve revisar cada linha de código à medida que é digitada, procurando erros, fazendo perguntas e sugerindo melhorias. Depois disso, os alunos devem trocar de papéis e continuar escrevendo o código de descriptografia.
@@ -69,10 +69,6 @@ a saída deve ser:
 ```text
 nikolatesla
 ```
-
-## Inicie a tarefa
-
-[Implemente a cifra aqui ](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142923)
 
 ## Dicas de solução
 

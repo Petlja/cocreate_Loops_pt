@@ -4,7 +4,10 @@ alias: Loops_and_Cryptography_pt
 lang: en
 short_description: Introdução à Criptografia com Laços
 long_description: >
-    <p>Neste curso, você aprenderá a aplicar laços em caracteres e strings para implementar algoritmos criptográficos básicos.</p>
+    <p>Neste curso, você aprenderá a aplicar laços em caracteres e strings para implementar algoritmos criptográficos básicos e entender por que isso é importante.</p>
+    
+    <p>Este curso foi criado no âmbito do projeto Erasmus+ <a rel="license" href="https://erasmus-cocreate.petlja.org">CoCreate - Computer-Supported Collaborative Learning for Inclusive Education</a>
+    </p>
     <p>
     <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">
     <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
@@ -21,6 +24,7 @@ will_learn:
 
 needed: 
     - Um computador pessoal básico com acesso à Internet. Opcionalmente, um computador com IDE de linguagem de programação específica.
+    - Três aulas escolares
 
 useful:
     - Microsoft C++, C, and Assembler documentation: https://learn.microsoft.com/en-us/cpp/
