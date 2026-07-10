@@ -1,11 +1,5 @@
 # Skytale
 
-Após concluir esta lição, você será capaz de:
-
-* Explicar como funciona a cifra Skytale.
-* Implementar criptografia e descriptografia usando operações simples de array ou string.
-* Entender como dispositivos físicos de criptografia podem ser modelados digitalmente.
-
 A Skytale é uma das ferramentas mais antigas conhecidas para criptografia, datando da Grécia Antiga por volta de 400 a.C. Era um dispositivo cilíndrico simples usado pelos espartanos para enviar mensagens secretas durante campanhas militares.
 
 Uma tira de pergaminho ou couro era enrolada em torno de uma haste de madeira (a *skytale*) de um diâmetro específico. A mensagem era então escrita ao longo da haste. Uma vez desenrolada, as letras pareciam embaralhadas e sem sentido. O destinatário precisava de uma haste do **exato mesmo diâmetro** para enrolar a tira e ler a mensagem original.
@@ -32,9 +26,9 @@ acdtkatawatn
 
 Para descriptografar, o receptor enrola novamente a tira em uma haste do mesmo diâmetro e lê verticalmente novamente para reconstruir a mensagem original.
 
-## Tarefa simples
+## Primeira Tarefa
 
-Crie um aplicativo de console em qualquer linguagem de programação para criptografar e descriptografar mensagens usando a cifra Skytale.
+Crie um aplicativo de console em qualquer linguagem de programação para criptografar e descriptografar mensagens usando a cifra Skytale. Use o ambiente de desenvolvimento que você utiliza nas aulas de programação.
 
 O alfabeto permitido para mensagens inclui apenas as letras minúsculas do alfabeto inglês:
 
@@ -77,10 +71,6 @@ a saída deve ser:
 ```text
 attackatdawn
 ```
-
-## Inicie a tarefa
-
-[Implemente a cifra aqui ](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142946)
 
 ## Dicas de solução
 
