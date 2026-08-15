@@ -20,7 +20,7 @@ A letra `K` vira `N`, `F` vira `I` e assim por diante. O resultado do deslocamen
 
 ![Caesar Cipher Left Shift](./images/caesar1.png)
 
-## Tarefa para Pensar
+## Resolva o Exercício
 
 Pense em como você criaria um aplicativo de console em qualquer linguagem de programação para criptografar e descriptografar mensagens usando a cifra de César. Algumas dicas são fornecidas a seguir. Depois de lê-las, tente criar o aplicativo de console no ambiente de desenvolvimento que você usa nas aulas de programação.
 
@@ -70,7 +70,7 @@ a saída deve ser:
 nikolatesla
 ```
 
-## Dicas de solução
+### Dicas de solução
 
 Como existem 26 letras no alfabeto inglês, a posição de cada letra pode ser representada por um número de 0 a 25.
 
@@ -96,7 +96,7 @@ nova_posicao_letra = (posicao_atual_letra - valor_deslocamento + 26) mod 26
 
 Semelhante à criptografia, mas você subtrai o valor do deslocamento, e `+ 26` garante que o valor não fique negativo antes de aplicar o `mod 26`.
 
-## Tarefas avançadas de Cifra de César (opcional)
+## Exercícios Mais Complexos (opcional)
 
 ### Expanda o alfabeto permitido
 

@@ -26,7 +26,7 @@ acdtkatawatn
 
 Para descriptografar, o receptor enrola novamente a tira em uma haste do mesmo diâmetro e lê verticalmente novamente para reconstruir a mensagem original.
 
-## Primeira Tarefa
+## Resolva o Exercício
 
 Crie um aplicativo de console em qualquer linguagem de programação para criptografar e descriptografar mensagens usando a cifra Skytale. Use o ambiente de desenvolvimento que você utiliza nas aulas de programação.
 
@@ -72,11 +72,11 @@ a saída deve ser:
 attackatdawn
 ```
 
-## Dicas de solução
+### Dicas de solução
 
 Para **criptografar**, escreva o texto simples verticalmente em uma tabela com `k` colunas. Leia a tabela linha por linha para formar o texto cifrado. Para **descriptografar**, escreva o texto cifrado linha por linha em uma tabela com `k` colunas e leia a tabela verticalmente para reconstruir o texto simples.
 
-## Tarefas avançadas de Skytale (opcional)
+## Exercícios Mais Complexos (opcional)
 
 ### Expanda o alfabeto permitido
 
