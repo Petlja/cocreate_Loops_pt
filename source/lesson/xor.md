@@ -64,7 +64,7 @@ O XOR sozinho não fornece segurança forte, a menos que a chave seja gerenciada
 e tenha pelo menos o mesmo tamanho da mensagem — como em uma one-time pad (chave descartável). No entanto, para fins educacionais e demonstrações básicas de princípios criptográficos, o XOR
 é simples e ideal.
 
-## Tarefa simples
+## Resolva o Exercício
 
 Crie um aplicativo de console em qualquer linguagem de programação para criptografar e descriptografar
 mensagens usando a operação XOR.
@@ -117,13 +117,13 @@ nikolatesla
 
 [Implemente a cifra aqui ](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142947)
 
-## Dicas de solução
+### Dicas de solução
 
 Cada caractere é armazenado na memória como um valor ASCII de 8 bits (para letras minúsculas a–z, os códigos variam de 97 a 122). Para criptografar um caractere, pegue seu valor ASCII e o valor ASCII do caractere correspondente da chave (ciclando pela chave), aplique XOR (^) entre eles e exiba o resultado como um número binário de 8 bits.
 
 Para descriptografar, siga o processo inverso: pegue cada bloco binário de 8 bits do texto cifrado, converta de volta para um inteiro (0–255), aplique XOR com o valor ASCII do caractere correspondente da chave e converta o resultado de volta para um caractere.
 
-## Tarefas avançadas de XOR (opcional)
+## Exercícios Mais Complexos (opcional)
 
 ### Expanda o alfabeto permitido
 
