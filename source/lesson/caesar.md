@@ -1,34 +1,37 @@
 # Cifra de César
 
-Um dos grandes generais que usava mensagens codificadas foi Júlio César, por volta de 50 a.C. Quando César enviava mensagens para seus generais, ele as criptografava deslocando as letras do texto por um número fixo de posições no alfabeto. Os destinatários da mensagem podiam decifrá-la porque sabiam o valor do deslocamento — enquanto todos os outros viam apenas um texto sem sentido.
+Um dos grandes comandantes militares que usou mensagens criptografadas foi Júlio César, por volta de 50 a.C. Ele usava uma cifra simples conhecida como cifra de César para proteger comunicações militares. Essa cifra também é chamada de cifra de deslocamento, porque cada letra do texto simples é substituída por uma letra situada a um número fixo de posições antes ou depois no alfabeto.
 
-Por exemplo, se você escrever `NIKOLATESLA` e deslocar cada letra três posições para a direita:
+Por exemplo, se você escrever `NIKOLATESLA` e deslocar cada letra três posições para a esquerda:
+
+![Deslocamento para a esquerda da Cifra de César](./images/caesar1.png)
 
 ```text
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 X Y Z A B C D E F G H I J K L M N O P Q R S T U V W
 ```
 
-A letra `N` vira `K`, `I` vira `F` e assim por diante. Assim, cada letra é substituída por outra letra que está um número fixo de posições à frente no alfabeto. Quando o final do alfabeto é alcançado, a sequência continua do início. O resultado do deslocamento de três letras para a direita seria a mensagem criptografada `KFHLIXQBPIX`. Por outro lado, se cada letra da palavra resultante fosse deslocada três letras para a esquerda:
+A letra `N` se torna `K`, `I` se torna `F`, e assim por diante. Portanto, cada letra é substituída por outra letra que está a uma determinada distância no alfabeto.
+
+A **descriptografia** funciona da mesma maneira, mas ao contrário. Para descriptografar o texto cifrado, desloque cada letra três posições para a direita:
 
 ```text
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
 ```
 
-A letra `K` vira `N`, `F` vira `I` e assim por diante. O resultado do deslocamento seria a mensagem original descriptografada `NIKOLATESLA`.
+A letra `K` se torna `N`, `F` se torna `I`, e assim por diante. O resultado desse deslocamento é a mensagem original descriptografada `NIKOLATESLA`.
 
-![Caesar Cipher Left Shift](./images/caesar1.png)
 
-## Resolva o Exercício
+## Tarefa para pensar
 
-Pense em como você criaria um aplicativo de console em qualquer linguagem de programação para criptografar e descriptografar mensagens usando a cifra de César. Algumas dicas são fornecidas a seguir. Depois de lê-las, tente criar o aplicativo de console no ambiente de desenvolvimento que você usa nas aulas de programação.
+Pense em como você criaria um aplicativo de console em qualquer linguagem de programação que criptografe e descriptografe mensagens usando a cifra de César.
 
 ```{infonote}
-O primeiro aluno (*o driver*) deve focar na sintaxe ao escrever o código para criptografia da mensagem. O segundo aluno (*o navegador*) deve revisar cada linha de código à medida que é digitada, procurando erros, fazendo perguntas e sugerindo melhorias. Depois disso, os alunos devem trocar de papéis e continuar escrevendo o código de descriptografia.
+O primeiro aluno (*piloto*) deve se concentrar na sintaxe enquanto digita o código para criptografar a mensagem. O segundo aluno (*navegador*) deve acompanhar o código, sugerir melhorias e fazer perguntas. Depois de criptografar, troquem os papéis para descriptografar.
 ```
 
-O alfabeto permitido para mensagens (tanto para texto simples quanto para texto cifrado) pode incluir apenas letras minúsculas do alfabeto inglês:
+O alfabeto permitido para mensagens (tanto para o texto simples quanto para o texto cifrado) pode conter apenas letras minúsculas do alfabeto inglês:
 
 ```text
 Σ = { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }
@@ -36,7 +39,7 @@ O alfabeto permitido para mensagens (tanto para texto simples quanto para texto 
 
 Espaços, letras maiúsculas, números e outros caracteres não são permitidos.
 
-Na primeira linha da entrada do usuário haverá uma mensagem `m` com no máximo cem caracteres, na segunda linha haverá um inteiro `n` que representa o valor do deslocamento ($1 \leq n < 26$), e na terceira linha haverá um inteiro `s`, que representa a direção da criptografia. Se $s=1$ então `m` deve ser criptografada, e se $s=2$, então `m` deve ser descriptografada.
+Na primeira linha da entrada, há uma mensagem `m` com no máximo cem caracteres; na segunda linha, um número inteiro `n`, que representa o valor do deslocamento (1–25); e na terceira linha, um número inteiro `s`, que representa a direção da criptografia. Se `s=1`, então `m` deve ser criptografada; e se `s=2`, então `m` deve ser descriptografada.
 
 ### Exemplo de teste 1
 
@@ -70,9 +73,9 @@ a saída deve ser:
 nikolatesla
 ```
 
-### Dicas de solução
+## Dicas de solução
 
-Como existem 26 letras no alfabeto inglês, a posição de cada letra pode ser representada por um número de 0 a 25.
+Como o alfabeto inglês tem 26 letras, a posição de cada letra pode ser representada por um número de 0 a 25.
 
 * a → 0
 * b → 1
@@ -83,57 +86,61 @@ Como existem 26 letras no alfabeto inglês, a posição de cada letra pode ser r
 Para **criptografar** uma letra, você pode usar a seguinte fórmula:
 
 ```text
-nova_posicao_letra = (posicao_atual_letra + valor_deslocamento) mod 26
+new_letter_position = (current_letter_position - shift_value + 26) mod 26
 ```
 
-`posicao_original` representa o valor numérico da letra no alfabeto, `valor_deslocamento` representa o número de posições a mover (1–25), e `mod 26` garante que o resultado volte ao início do alfabeto se ultrapassar `z`.
+`current_letter_position` representa o valor numérico da letra no alfabeto, `shift_value` representa o número de posições do deslocamento (1–25), `+ 26` garante que o valor não se torne negativo e `mod 26` garante que o valor volte ao início do alfabeto.
 
 Para **descriptografar** uma letra, você pode usar a seguinte fórmula:
 
 ```text
-nova_posicao_letra = (posicao_atual_letra - valor_deslocamento + 26) mod 26
+new_letter_position = (current_letter_position + shift_value) mod 26
 ```
 
-Semelhante à criptografia, mas você subtrai o valor do deslocamento, e `+ 26` garante que o valor não fique negativo antes de aplicar o `mod 26`.
+Da mesma forma que na criptografia, mas o valor do deslocamento é somado, portanto o valor não pode se tornar negativo e `+ 26` não é necessário.
 
-## Exercícios Mais Complexos (opcional)
+## Exercícios mais complexos da cifra de César (opcional)
 
-### Expanda o alfabeto permitido
+### Expandir o alfabeto permitido
 
-Crie um aplicativo de console em qualquer linguagem de programação para criptografar e descriptografar mensagens usando a cifra de César. O alfabeto permitido para mensagens (texto simples e texto cifrado) pode incluir letras minúsculas e maiúsculas do alfabeto inglês, espaços, números e pontuação!
+Crie um aplicativo de console em qualquer linguagem de programação que criptografe e descriptografe mensagens usando a cifra de César, mas com um alfabeto expandido.
 
-O aplicativo deve criptografar ou descriptografar apenas letras minúsculas e maiúsculas. Espaços, números e sinais de pontuação devem permanecer inalterados durante a criptografia ou descriptografia.
+O aplicativo deve criptografar ou descriptografar apenas letras minúsculas e maiúsculas. Espaços, números e sinais de pontuação devem permanecer inalterados.
 
-Na primeira linha da entrada padrão haverá uma mensagem `m` com no máximo cem caracteres, na segunda linha haverá um inteiro `n` que representa o deslocamento ($1 \leq n < 26$), e na terceira linha haverá um inteiro `s`, que representa a direção da criptografia. Se $s=1$ então `m` deve ser criptografada, e se $s=2$, então `m` deve ser descriptografada.
+Na primeira linha da entrada, há uma mensagem `m` com no máximo cem caracteres; na segunda linha, um número inteiro `n` (o valor do deslocamento, de 1–25); e na terceira linha, um número inteiro `s` (1 para criptografia, 2 para descriptografia).
 
-## Use funções
+## Use as funções
 
-Crie duas funções: uma para criptografar mensagens e outra para descriptografar mensagens. Use as funções criadas em seu programa principal.
+Crie duas funções: uma para criptografar mensagens e outra para descriptografar mensagens. Use as funções criadas no seu programa principal.
 
-## Crie uma Classe
+Aqui você pode trabalhar em dupla: uma pessoa deve criptografar a mensagem, e a outra deve descriptografá-la!
+
+## Crie uma classe
 
 Crie uma classe `CaesarCipher` que contenha:
 
-* um construtor com um parâmetro que aceita o valor do deslocamento e garante que o valor esteja dentro do intervalo permitido,
-* uma propriedade privada para armazenar o valor do deslocamento, com métodos getter e setter,
-* um método público para criptografar a mensagem,
-* um método público para descriptografar a mensagem, e
-* opcionalmente, inclua um método privado para processar mensagens, que será usado tanto pelos métodos de criptografia quanto de descriptografia.
+- um construtor com um parâmetro que recebe o valor do deslocamento e garante que o valor esteja dentro do intervalo permitido (0–25),
+- uma propriedade privada para armazenar o valor do deslocamento, com métodos getter e setter,
+- um método público para criptografar uma mensagem,
+- um método público para descriptografar uma mensagem, e
+- opcionalmente, um método privado para processar mensagens, usado pelos dois métodos.
 
-Use a classe criada em seu programa principal.
+Use a classe criada no programa principal.
 
-## Aceite argumentos de linha de comando
+## Aceite argumentos da linha de comando
 
-Em vez de esperar pela entrada do usuário, crie um aplicativo de console que aceite os seguintes argumentos de linha de comando:
+Em vez de aguardar a entrada do usuário, crie um aplicativo de console que aceite os seguintes argumentos da linha de comando:
 
-1. argumento `m` para especificar a mensagem,
-2. argumento `n` para especificar o valor do deslocamento (`0` a `25`), e
-3. argumento `s` para especificar a direção do deslocamento (`1` para criptografia e `2` para descriptografia).
+1. argumento `m` para a mensagem,
+2. argumento `n` para o valor do deslocamento (`0` a `25`) e
+3. argumento `s` para a direção da criptografia (`1` para criptografar, `2` para descriptografar).
 
 ## Criptografe e descriptografe arquivos
 
-Use o conhecimento adquirido até agora para criar um aplicativo de console para criptografar e descriptografar arquivos de texto. Seu aplicativo deve aceitar os seguintes argumentos de linha de comando:
+Use os conhecimentos adquiridos até agora para criar um aplicativo de console que criptografe e descriptografe arquivos de texto usando a cifra de César.
 
-1. argumento `m` para especificar o nome do arquivo (ou um caminho),
-2. argumento `n` para especificar o valor do deslocamento (`0` a `25`), e
-3. argumento `s` para especificar a direção do deslocamento (`1` para criptografia e `2` para descriptografia).
+O aplicativo deve aceitar os seguintes argumentos da linha de comando:
+
+1. argumento `m` para o nome (ou caminho) do arquivo,
+2. argumento `n` para o valor do deslocamento (`0` a `25`) e
+3. argumento `s` para a direção da criptografia (`1` para criptografar, `2` para descriptografar).
