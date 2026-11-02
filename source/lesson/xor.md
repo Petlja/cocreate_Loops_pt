@@ -115,7 +115,7 @@ nikolatesla
 
 ## Inicie a tarefa
 
-[Implemente a cifra aqui ](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142947)
+Realiza a tarefa e escreve a solução no teu caderno ou documento.
 
 ### Dicas de solução
 
