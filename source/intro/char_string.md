@@ -154,6 +154,8 @@ caracteres de sistemas de escrita do mundo todo. Por exemplo, os caracteres lati
 Embora algumas letras latinas e cirílicas pareçam iguais, seus valores de código Unicode são diferentes.
 Por exemplo, a letra maiúscula latina A é codificada como U+0041, enquanto a letra maiúscula cirílica A é codificada como U+0410.
 
+Estes são apenas exemplos da língua sérvia. Se tiveres interesse, podes sempre aprender mais sobre os caracteres específicos utilizados noutras línguas.
+
 ## Strings
 
 Uma string é uma sequência de caracteres dispostos em uma ordem específica. Cada
